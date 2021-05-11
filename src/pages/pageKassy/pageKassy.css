@@ -1,0 +1,12 @@
+.sxema {
+    max-width: 1900px;
+    height: 850px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+.imgSxema {
+    min-width: 85vw !important;
+    margin: 0 auto;
+    height: 800px;
+}

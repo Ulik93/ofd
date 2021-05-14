@@ -2,3 +2,41 @@
     height: 20px;
     background-color: red;
 }
+
+
+/* .kassy__content-tittle{
+} */
+.kassy__content{
+    padding-top: 5%;
+    justify-content: center;
+    display: flex;
+    height: 300px;
+    flex-wrap: wrap;
+}
+.kassy__content-tittle, .kassy__content-subtittle{
+    font-family: colibriRegular;
+
+    text-align: center;
+}
+.kassy__content-tittle{
+    font-size: 3rem;
+}
+.kassy__content-subtittle{
+font-size: 1.6rem;
+letter-spacing: 2px;
+}
+.kassy__content-bottom{
+    height: 60vh;
+    background-image: url(./img/kassy-bg.png);
+    background-position: center;
+    background-size: cover;
+
+}
+.kassy__content-photo{
+    margin-left: 5%;
+}
+
+.kassy__content-img{
+    margin-top: 13vh;
+max-width: 500px;
+}

@@ -1,8 +1,5 @@
 import '../src/index.css'
-
-
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import pageUslugi from "./pages/pageUslugi/pageUslugi";
 import Home from "./components/home";
 import Header from "./components/header/header";
 import Footer from "./components/secondFooter/Footer";
@@ -16,7 +13,6 @@ function App() {
             <Header />
             <Switch>
                 <Route path='/' component={Home} exact />
-                <Route path='/uslugi' component={pageUslugi} exact />
                 <Route path='/kassy' component={pageKassy} exact />
                 <Route path='/tarify' component={pageTarify} exact />
                 <Route path='/contacts' component={pageContacts} exact />

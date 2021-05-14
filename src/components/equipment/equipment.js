@@ -2,7 +2,7 @@ import React from 'react'
 import './equipment.css'
 let arr = [
   {
-  title: 'оборудование',
+  title: 'оборудование ',
   
   }
 ]

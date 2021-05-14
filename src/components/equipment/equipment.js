@@ -1,13 +1,22 @@
 import React from 'react'
-import './partners.css'
-
-const Partners = () => {
-    
+import './equipment.css'
+let arr = [
+  {
+  title: 'оборудование',
+  
+  }
+]
+const Equipment = (date) => {
   return (
-    <div className="partner">
-       Партнеры
+    <div className="equipment">
+      <h1>{arr.map((item)=>{
+        return(
+          item.title
+        )
+      })}</h1>
+
       </div>
   )
 }
 
-export default Partners
+export default Equipment

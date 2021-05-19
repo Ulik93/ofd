@@ -1,0 +1,19 @@
+
+.counter__wrapper{
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ofd__block{
+    margin-top:20%;
+}
+span{
+    color: white;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: rgb(223, 213, 213);
+}

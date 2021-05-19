@@ -1,8 +1,34 @@
 .equipment h1{
     color: #5b5b60;
-    font-size: 40px;
+    font-size: 30px;
     font-family: colibriRegular;
     text-transform: uppercase;
     text-align: center;
     margin-top: 1%;
+}
+.equipment__item{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.equipment__items{
+    border-left: 2px solid #5b5b60;
+    border-right: 2px solid #5b5b60;
+
+    margin: 2% 3% 2% 3%;
+    width: 320px;
+}
+.equipment__item-img{
+    
+    display: flex;
+    justify-content: center;
+}
+.equipment__items-title p{
+    margin-top: 2%;
+    text-align: center;
+    width: 320px;
+    font-family: colibriRegular;
+    text-transform: uppercase;
+    font-size: 1.2em;
 }

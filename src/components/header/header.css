@@ -11,7 +11,7 @@
     justify-content: space-between;
 }
 .header__wrapper {
-    max-width: 1180px;
+    max-width: 1080px;
     margin: 0 auto;
    
 }
@@ -38,7 +38,7 @@
 
 .header__auth-link {
     font-family: colibriRegular;
-    font-size: 24px ;
+    font-size: 15px ;
 margin-top: 10px;
     text-decoration: none;
     color: white;
@@ -52,7 +52,7 @@ margin-top: 10px;
 
 }
 .header__nav-items a{
-    font-size: 30px ;
+    font-size: 20px ;
     color: #010b48;
     text-decoration: none;
     margin-right: 30px;

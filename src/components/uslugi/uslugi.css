@@ -19,11 +19,12 @@
     text-align: center;
 }
 .kassy__content-tittle{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #010b48;
 }
 .kassy__content-subtittle{
-font-size: 1.6rem;
+    margin-top: 10px;
+font-size: 1.2rem;
 letter-spacing: 2px;
 }
 .kassy__content-bottom{

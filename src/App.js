@@ -14,7 +14,6 @@ function App() {
                 <Route path='/' component={Home} exact />
                 <Route path='/knowledgebase' component={Knowledgebase} exact />
                 <Route path='/Kassa' component={Kassa} exact />
-
                 <Redirect to='/' />
             </Switch>
             <Footer />

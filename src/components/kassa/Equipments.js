@@ -6,6 +6,8 @@ import Modal from "react-modal"
 import { useState } from "react"
 import useForm from "./useForm"
 import validateInfo from "./validate"
+import Button from '@material-ui/core/Button';
+
 
 const customStyles = {
   overlay: {
@@ -72,13 +74,15 @@ export default function Equipments(props) {
               </div>
               <div className="staffs_cards_item_btn">
 
-                <button
-                  target="_blank"
+                <Button
+                color="red"
+                variant="contained" color="primary" href="#contained-buttons"
                   className="about_btn staff_card_button"
                   onClick={() => openModal(item.title)}
                 >
                   Заказать
-                </button>
+                </Button>
+
               </div>
             </div>
           ))}
@@ -146,6 +150,15 @@ export default function Equipments(props) {
                 placeholder="Название компании"
                 onChange={handleChange}
                 value={values.company}
+              />
+               <label>Файлы:</label>
+              <input
+              multiple
+                className="modal__equipment-input"
+                type="file"
+                name="file"
+                placeholder="Название компании"
+                onChange={handleChange}
               />
               {company ? (
                 <p className="modal__eqipment-error">{company}</p>

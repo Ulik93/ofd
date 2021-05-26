@@ -58,7 +58,7 @@ const useForm = (title, validate, closeModal) => {
     })
   }, [title])
 
-  return { handleChange, values, handleFormSubmit, errors }
+  return {  handleChange, values, handleFormSubmit, errors }
 }
 
 export default useForm

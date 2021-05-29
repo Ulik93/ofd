@@ -12,6 +12,7 @@ const useForm = (title, validate, closeModal) => {
       company: "",
       address: "",
       product: title,
+      profile_images: []
     }),
     [errors, setErrors] = useState({}),
     [isSubmitting, setIsSubmitting] = useState(false)
@@ -43,6 +44,7 @@ const useForm = (title, validate, closeModal) => {
         company: "",
         address: "",
         product: title,
+        profile_images: []
       })
       closeModal()
       notify()

@@ -27,6 +27,7 @@ Modal.setAppElement("#root")
 
 export default function Equipments(props) {
   const [modalIsOpen, setIsOpen] = useState(false)
+  const [selectedProductInfo, setSelectedProductInfo] = useState({})
   const [title, setTitle] = useState(null)
   const { handleChange, values, handleFormSubmit, errors } = useForm(
     title,
@@ -36,9 +37,10 @@ export default function Equipments(props) {
   const { phone, address, first_name, company } = errors
 
   var subtitle
-  function openModal(title) {
+  function openModal(title, image) {
     setIsOpen(true)
     setTitle(title)
+    setSelectedProductInfo({productImage: image})
   }
   console.log(title);
   function afterOpenModal() {
@@ -83,7 +85,7 @@ export default function Equipments(props) {
                 color="red"
                 variant="contained" color="primary" href="#contained-buttons"
                   className="about_btn staff_card_button"
-                  onClick={() => openModal(item.title)}
+                  onClick={() => openModal(item.title, item.image)}
                 >
                   Заказать
                 </Button>
@@ -187,7 +189,9 @@ export default function Equipments(props) {
               <div>
                 Оборудование:
                 <span className="modal__equipment-name">{title}</span>
+                <img src={selectedProductInfo.productImage} alt="image" />
               </div>
+
               <button
                 className="about_btn modal__equipment-btn"
                 type="submit"

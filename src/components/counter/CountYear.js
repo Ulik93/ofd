@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 
-function Count() {
-  const [count, setCount] = useState(120021);
+function CountYear() {
+  const [count, setCount] = useState(900021);
 
   useInterval(() => {
     // Your custom logic here
-    setCount(count + 221);
+    setCount(count + 121);
   }, 1000);
 
   return <h1>{count}</h1>;
@@ -32,4 +32,4 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-export default Count;
+export default CountYear;

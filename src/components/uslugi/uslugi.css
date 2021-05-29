@@ -13,6 +13,9 @@
     height: 300px;
     flex-wrap: wrap;
 }
+.kassy__content-photo img{
+    width: 80%;
+}
 .kassy__content-tittle, .kassy__content-subtittle{
     font-family: colibriRegular;
 
@@ -41,4 +44,14 @@ letter-spacing: 2px;
 .kassy__content-img{
     margin-top: 13vh;
 max-width: 500px;
+}
+
+@media screen and (max-width: 905px) {
+    .kassy__content-photo{
+        display: flex;
+        justify-content: center;
+    }
+.kassy__content-photo img{
+width: 50%;
+}
 }

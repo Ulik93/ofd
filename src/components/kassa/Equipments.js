@@ -118,14 +118,14 @@ export default function Equipments(props) {
                 Заполните форму и мы свяжемся с Вами
               </h2>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form>
               <label>Имя:</label>
               <input
                 className="modal__equipment-input"
                 type="text"
                 name="first_name"
                 placeholder="Имя"
-                {...register("name", {required: true})}
+                // {...register("name", {required: true})}
                 value={values.first_name}
               />
               {first_name ? (
@@ -139,7 +139,7 @@ export default function Equipments(props) {
                 type="number"
                 name="phone"
                 placeholder="Номер телефона"
-                {...register("name", {required: true})}
+                // {...register("name", {required: true})}
                 value={values.phone}
               />
               {phone ? (
@@ -153,7 +153,7 @@ export default function Equipments(props) {
                 type="text"
                 name="company"
                 placeholder="Название компании"
-                {...register("name", {required: true})}
+                // {...register("name", {required: true})}
                 value={values.company}
               />
                <label>Файлы:</label>
@@ -163,7 +163,7 @@ export default function Equipments(props) {
                 type="file"
                 name="file"
                 placeholder=""
-                {...register("name", {required: true})}
+                // {...register("name", {required: true})}
               />
               {company ? (
                 <p className="modal__eqipment-error">{company}</p>
@@ -176,7 +176,7 @@ export default function Equipments(props) {
                 type="text"
                 name="address"
                 placeholder="Адрес"
-                {...register("name", {required: true})}
+                // {...register("name", {required: true})}
                 value={values.address}
               />
               {address ? (
@@ -191,7 +191,7 @@ export default function Equipments(props) {
               <button
                 className="about_btn modal__equipment-btn"
                 type="submit"
-                {...register("name", {required: true})}
+                // {...register("name", {required: true})}
               >
                 Отправить
               </button>

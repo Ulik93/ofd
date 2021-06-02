@@ -6,8 +6,8 @@ import Modal from "react-modal"
 import { useState } from "react"
 import useForm from "./useForm"
 import validateInfo from "./validate"
-import Button from '@material-ui/core/Button';
-
+import Button from "@material-ui/core/Button"
+import axios from "axios"
 
 const customStyles = {
   overlay: {
@@ -27,7 +27,6 @@ Modal.setAppElement("#root")
 
 export default function Equipments(props) {
   const [modalIsOpen, setIsOpen] = useState(false)
-  const [selectedProductInfo, setSelectedProductInfo] = useState({})
   const [title, setTitle] = useState(null)
   const { handleChange, values, handleFormSubmit, errors } = useForm(
     title,
@@ -36,13 +35,51 @@ export default function Equipments(props) {
   )
   const { phone, address, first_name, company } = errors
 
+  const uploadImage = async (e) => {
+    const reader = new FileReader()
+    reader.readAsDataURL(e.target.files[0])
+
+    reader.onload = () => {
+      console.log(e.target.result)
+
+      if (reader.readyState === 2) {
+        axios
+          .post(
+            "https://49763609aa90.ngrok.io/api/orders/kkm/",
+            {
+              first_name: "asdasdasd",
+              company: "sd",
+              phone: "+996500",
+              address: "bishkek",
+              product: "weqwe",
+              email: "xekite2735@shzsedu.com",
+              // subject_photo: "/media/OrdersKKM/subject_photo/hover5_1.jpeg",
+              // technical_passport: "/media/OrdersKKM/technical_passport/hover5_1.jpeg",
+              // registration_certificate_image: "/media/OrdersKKM/registration_certificate/hover5_2.jpg",
+              // profile_images: "/media/OrdersKKM/profile_images/hover5_3.jpg",
+              registration_certificate_image: reader.result,
+              profile_images: reader.result,
+              subject_photo: reader.result,
+              technical_passport: reader.result,
+            },
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }
+          )
+          .then((res) => console.log(res))
+        console.log(reader.result)
+      }
+    }
+  }
+
   var subtitle
-  function openModal(title, image) {
+  function openModal(title) {
     setIsOpen(true)
     setTitle(title)
-    setSelectedProductInfo({productImage: image})
   }
-  console.log(title);
+  console.log(title)
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#000"
@@ -56,11 +93,6 @@ export default function Equipments(props) {
     window.scrollTo(0, 0)
     Aos.init({ duration: 2000 })
   }, [])
-  const onSubmit =(data)=>{
-    console.log(data)
-
-  }
-
 
   return (
     <div className="equipments">
@@ -80,16 +112,16 @@ export default function Equipments(props) {
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
-
                 <Button
-                color="red"
-                variant="contained" color="primary" href="#contained-buttons"
+                  color="red"
+                  variant="contained"
+                  color="primary"
+                  href="#contained-buttons"
                   className="about_btn staff_card_button"
-                  onClick={() => openModal(item.title, item.image)}
+                  onClick={() => openModal(item.title)}
                 >
                   Заказать
                 </Button>
-
               </div>
             </div>
           ))}
@@ -127,7 +159,7 @@ export default function Equipments(props) {
                 type="text"
                 name="first_name"
                 placeholder="Имя"
-                // {...register("name", {required: true})}
+                onChange={handleChange}
                 value={values.first_name}
               />
               {first_name ? (
@@ -141,7 +173,7 @@ export default function Equipments(props) {
                 type="number"
                 name="phone"
                 placeholder="Номер телефона"
-                // {...register("name", {required: true})}
+                onChange={handleChange}
                 value={values.phone}
               />
               {phone ? (
@@ -155,17 +187,18 @@ export default function Equipments(props) {
                 type="text"
                 name="company"
                 placeholder="Название компании"
-                // {...register("name", {required: true})}
+                onChange={handleChange}
                 value={values.company}
               />
-               <label>Файлы:</label>
+              <label>Файлы:</label>
               <input
-              multiple
+                multiple
                 className="modal__equipment-input"
                 type="file"
+                accept="image/*"
                 name="file"
-                placeholder=""
-                // {...register("name", {required: true})}
+                placeholder="Название компании"
+                onChange={uploadImage}
               />
               {company ? (
                 <p className="modal__eqipment-error">{company}</p>
@@ -178,7 +211,7 @@ export default function Equipments(props) {
                 type="text"
                 name="address"
                 placeholder="Адрес"
-                // {...register("name", {required: true})}
+                onChange={handleChange}
                 value={values.address}
               />
               {address ? (
@@ -189,13 +222,11 @@ export default function Equipments(props) {
               <div>
                 Оборудование:
                 <span className="modal__equipment-name">{title}</span>
-                <img src={selectedProductInfo.productImage} alt="image" />
               </div>
-
               <button
                 className="about_btn modal__equipment-btn"
                 type="submit"
-                // {...register("name", {required: true})}
+                onClick={handleFormSubmit}
               >
                 Отправить
               </button>

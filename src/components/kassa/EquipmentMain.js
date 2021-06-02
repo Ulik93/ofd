@@ -30,7 +30,7 @@ import rashod4 from "./images/rashod4.jpg";
 import rashod5 from "./images/rashod5.jpg";
 import rashod6 from "./images/rashod6.jpg";
 // import Rashod from "./Parts/Rashod";
-import "./Equipments.css"
+import './Equipments.css'
 
 export default function EquipmentMain() {
   const staffs1 = [

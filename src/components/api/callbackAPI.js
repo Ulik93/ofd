@@ -2,7 +2,7 @@ import axios from "axios"
 
 export const sendCallbackNumber = (phone_number) => {
   axios
-    .post("https://362042fbde60.ngrok.io/api/orders/kkm/", { phone_number })
+    .post("https://0fdb29daefbe.ngrok.io/api/orders/kkm/", { phone_number })
     .catch((error) => {
       console.log(error)
     })
@@ -10,9 +10,17 @@ export const sendCallbackNumber = (phone_number) => {
 
 export const sendEquipmentForm = (data) => {
   axios
-    .post("https://362042fbde60.ngrok.io/api/orders/kkm/", {
-      ...data,
-    })
+    .post(
+      "https://0fdb29daefbe.ngrok.io/api/orders/kkm/",
+      {
+        ...data,
+      },
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    )
     .catch((error) => {
       console.log(error)
     })

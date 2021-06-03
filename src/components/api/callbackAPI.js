@@ -11,7 +11,7 @@ export const sendCallbackNumber = (phone_number) => {
 export const sendEquipmentForm = (data) => {
   axios
     .post(
-      "https://0fdb29daefbe.ngrok.io/api/orders/kkm/",
+      "https://167e9816d61a.ngrok.io/api/orders/kkm/",
       {
         ...data,
       },

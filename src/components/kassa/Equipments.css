@@ -11,34 +11,10 @@
 .staffs_cards_item {
   margin-bottom: 1.5rem;
 }
-.staffs_cards_item{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.staffs_cards_item {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 /* SIDEBAR */
-
-.equipments-nav_link {
-  display: grid;
-  grid-template-columns: 330px auto;
-  column-gap: 40px;
-}
-.equipment__sidebar {
-  display: grid;
-  margin: 2rem 0;
-  grid-template-columns: 330px;
-  grid-template-rows: repeat(auto-fit, 55px);
-}
-.nav_link-items {
-  padding: 15px 10px;
-  color: black;
-  border-bottom: 1px rgba(148, 148, 148, 0.397) solid;
-  transition: all 0.2s linear;
-}
-.nav_link-items:hover {
-  text-decoration: none;
-  color: white;
-  background-color: #033f84;
-  padding-left: 20px;
-}
 
 .equipments_row {
   display: flex;
@@ -129,6 +105,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
   margin-left: 8px;
+  color: black;
 }
 
 .modal__equipment-btn {
@@ -180,11 +157,6 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .equipments_wrapper {
     padding: 0 15px;
-  }
-
-  .equipment__sidebar {
-    margin: 2rem 0;
-    grid-template-columns: 100%;
   }
 
   .modal_x {

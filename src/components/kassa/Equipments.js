@@ -7,7 +7,6 @@ import { useState } from "react"
 import useForm from "./useForm"
 import validateInfo from "./validate"
 import Button from "@material-ui/core/Button"
-import axios from "axios"
 
 const customStyles = {
   overlay: {
@@ -27,59 +26,32 @@ Modal.setAppElement("#root")
 
 export default function Equipments(props) {
   const [modalIsOpen, setIsOpen] = useState(false)
-  const [title, setTitle] = useState(null)
-  const { handleChange, values, handleFormSubmit, errors } = useForm(
-    title,
-    validateInfo,
-    closeModal
-  )
-  const { phone, address, first_name, company } = errors
-
-  const uploadImage = async (e) => {
-    const reader = new FileReader()
-    reader.readAsDataURL(e.target.files[0])
-
-    reader.onload = () => {
-      console.log(e.target.result)
-
-      if (reader.readyState === 2) {
-        axios
-          .post(
-            "https://49763609aa90.ngrok.io/api/orders/kkm/",
-            {
-              first_name: "asdasdasd",
-              company: "sd",
-              phone: "+996500",
-              address: "bishkek",
-              product: "weqwe",
-              email: "xekite2735@shzsedu.com",
-              // subject_photo: "/media/OrdersKKM/subject_photo/hover5_1.jpeg",
-              // technical_passport: "/media/OrdersKKM/technical_passport/hover5_1.jpeg",
-              // registration_certificate_image: "/media/OrdersKKM/registration_certificate/hover5_2.jpg",
-              // profile_images: "/media/OrdersKKM/profile_images/hover5_3.jpg",
-              registration_certificate_image: reader.result,
-              profile_images: reader.result,
-              subject_photo: reader.result,
-              technical_passport: reader.result,
-            },
-            {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }
-          )
-          .then((res) => console.log(res))
-        console.log(reader.result)
-      }
-    }
-  }
+  const [productName, setProductName] = useState(null)
+  const {
+    handleChange,
+    handleImageChange,
+    values,
+    handleFormSubmit,
+    errors,
+  } = useForm(productName, validateInfo, closeModal)
+  const {
+    phone,
+    email,
+    address,
+    first_name,
+    company,
+    registration_certificate_image,
+    subject_photo,
+    technical_passport,
+    profile_images,
+  } = errors
 
   var subtitle
-  function openModal(title) {
+  function openModal(name) {
     setIsOpen(true)
-    setTitle(title)
+    setProductName(name)
   }
-  console.log(title)
+
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#000"
@@ -152,7 +124,7 @@ export default function Equipments(props) {
                 Заполните форму и мы свяжемся с Вами
               </h2>
             </div>
-            <form>
+            <form onSubmit={handleFormSubmit}>
               <label>Имя:</label>
               <input
                 className="modal__equipment-input"
@@ -170,7 +142,7 @@ export default function Equipments(props) {
               <label>Номер телефона:</label>
               <input
                 className="modal__equipment-input"
-                type="number"
+                type="text"
                 name="phone"
                 placeholder="Номер телефона"
                 onChange={handleChange}
@@ -178,6 +150,20 @@ export default function Equipments(props) {
               />
               {phone ? (
                 <p className="modal__eqipment-error">{phone}</p>
+              ) : (
+                <br />
+              )}
+              <label>Email:</label>
+              <input
+                className="modal__equipment-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                onChange={handleChange}
+                value={values.email}
+              />
+              {email ? (
+                <p className="modal__eqipment-error">{email}</p>
               ) : (
                 <br />
               )}
@@ -189,16 +175,6 @@ export default function Equipments(props) {
                 placeholder="Название компании"
                 onChange={handleChange}
                 value={values.company}
-              />
-              <label>Файлы:</label>
-              <input
-                multiple
-                className="modal__equipment-input"
-                type="file"
-                accept="image/*"
-                name="file"
-                placeholder="Название компании"
-                onChange={uploadImage}
               />
               {company ? (
                 <p className="modal__eqipment-error">{company}</p>
@@ -219,15 +195,62 @@ export default function Equipments(props) {
               ) : (
                 <br />
               )}
+
+              <label>registration_certificate_image:</label>
+              <input
+                type="file"
+                accept="image/*"
+                name="registration_certificate_image"
+                onChange={handleImageChange}
+              />
+              {registration_certificate_image ? (
+                <p className="modal__eqipment-error">
+                  {registration_certificate_image}
+                </p>
+              ) : (
+                <br />
+              )}
+              <label>subject_photo:</label>
+              <input
+                type="file"
+                accept="image/*"
+                name="subject_photo"
+                onChange={handleImageChange}
+              />
+              {subject_photo ? (
+                <p className="modal__eqipment-error">{subject_photo}</p>
+              ) : (
+                <br />
+              )}
+              <label>technical_passport:</label>
+              <input
+                type="file"
+                accept="image/*"
+                name="technical_passport"
+                onChange={handleImageChange}
+              />
+              {technical_passport ? (
+                <p className="modal__eqipment-error">{technical_passport}</p>
+              ) : (
+                <br />
+              )}
+              <label>profile_images:</label>
+              <input
+                type="file"
+                accept="image/*"
+                name="profile_images"
+                onChange={handleImageChange}
+              />
+              {profile_images ? (
+                <p className="modal__eqipment-error">{profile_images}</p>
+              ) : (
+                <br />
+              )}
               <div>
                 Оборудование:
-                <span className="modal__equipment-name">{title}</span>
+                <span className="modal__equipment-name">{productName}</span>
               </div>
-              <button
-                className="about_btn modal__equipment-btn"
-                type="submit"
-                onClick={handleFormSubmit}
-              >
+              <button className="about_btn modal__equipment-btn" type="submit">
                 Отправить
               </button>
             </form>

@@ -10,7 +10,6 @@
     "aos": "^2.3.4",
     "axios": "^0.21.1",
     "hamburger-react": "^2.4.1",
-    "node-sass": "^4.0.0",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -45,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.0"
   }
 }

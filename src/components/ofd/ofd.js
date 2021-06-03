@@ -1,5 +1,5 @@
 import React from 'react'
-import './ofd.css'
+import './ofd.sass'
 import w from './iPhone.png'
 const Ofd = () => {
   return (

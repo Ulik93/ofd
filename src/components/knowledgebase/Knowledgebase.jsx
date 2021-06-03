@@ -1,5 +1,5 @@
 import React from 'react'
-import './knowledgebase.css'
+import './knowledgebase.sass'
 const Knowledgebase = ()=>{
     return(
         <div className='knowledgebase'>

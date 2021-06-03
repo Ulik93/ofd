@@ -8,13 +8,14 @@ import "./header.sass";
 const Header = () => {
   const [isActive, setisActive] = useState(false);
   return (
-    <div id="root">
-      <div className="header__wrapper">
+    <div className="header__wrapper">
       <div className="header">
         <div className="header__logo">
           <img src={logo} alt="#" />
         </div>
-        <div className="header__menu">
+        <div
+          className={`header__menu ${isActive ? "header__menu-active" : ""}`}
+        >
           <div className="header__auth">
             <a className="header__auth-link" href="#">
               О нас
@@ -44,20 +45,16 @@ const Header = () => {
           </div>
         </div>
         <div className="header__burger">
-        <Hamburger
-        className={`burger`}
-          type="spring"
-          active={isActive}
-          onClick={() => {
-            setisActive(!isActive);
-            
-          }}
-        />
+          <Hamburger
+            type="spring"
+            active={isActive}
+            onClick={() => {
+              setisActive(!isActive);
+            }}
+          />
         </div>
       </div>
     </div>
-    </div>
-    
   );
 };
 

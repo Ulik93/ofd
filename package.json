@@ -10,11 +10,7 @@
     "aos": "^2.3.4",
     "axios": "^0.21.1",
     "hamburger-react": "^2.4.1",
-<<<<<<< HEAD
-    "node-sass": "^4.0.0",
-=======
     "node-sass": "^4.14.1",
->>>>>>> 70b3848f1f5142a4bdc87ca89975871dbd7c9d66
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

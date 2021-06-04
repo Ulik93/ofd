@@ -5,11 +5,9 @@ import img7 from "./images/7.png"
 import img15 from "./images/16.jpg"
 import port600 from "./images/port600.jpg"
 // import Rashod from "./Parts/Rashod";
-<<<<<<< HEAD
-import './Equipments.sass'
-=======
+
 import "./Equipments.css"
->>>>>>> 70b3848f1f5142a4bdc87ca89975871dbd7c9d66
+
 
 export default function EquipmentMain() {
   const staffs4 = [

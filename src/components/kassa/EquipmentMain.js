@@ -5,7 +5,9 @@ import img7 from "./images/7.png"
 import img15 from "./images/16.jpg"
 import port600 from "./images/port600.jpg"
 // import Rashod from "./Parts/Rashod";
+
 import "./Equipments.css"
+
 
 export default function EquipmentMain() {
   const staffs4 = [

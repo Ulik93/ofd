@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import "./Equipments.css"
+import "./Equipments.sass"
 import Aos from "aos"
 import "aos/dist/aos.css"
 import Modal from "react-modal"

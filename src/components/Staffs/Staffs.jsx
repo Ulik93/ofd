@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import './Staffs.css'
+import './Staffs.sass'
 import phone from './phone.jpg'
 import printer from './printer.jpg'
 import img6 from './6.png'

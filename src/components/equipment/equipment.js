@@ -5,7 +5,7 @@ import img1 from './photos/photo1.png'
 import img2 from './photos/photo2.png'
 import img3 from './photos/photo3.png'
 
-import './equipment.css'
+import './equipment.sass'
 const Equipment = (date) => {
   return (
     <div className="equipment">

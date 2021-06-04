@@ -16,14 +16,6 @@ const Header = () => {
         <div
           className={`header__menu ${isActive ? "header__menu-active" : ""}`}
         >
-          <div className="header__auth">
-            {/* <a className="header__auth-link" href="#">
-              О нас
-            </a> */}
-            <a className="header__auth-link" href="#">
-              Войти
-            </a>
-          </div>
           <div className="header__hamburger">
             <div className="header__nav">
               <div className="header__nav-items">
@@ -40,6 +32,11 @@ const Header = () => {
               </div>
               <div className="header__nav-items">
                 <NavLink to="/contactUs">Контакты</NavLink>
+              </div>
+              <div className="header__auth">
+                <a className="header__auth-link" href="#">
+                  Войти
+                </a>
               </div>
             </div>
           </div>

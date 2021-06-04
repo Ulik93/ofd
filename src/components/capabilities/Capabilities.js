@@ -27,11 +27,13 @@ export default function Capabilities() {
                 {items.map((item, index) => {
                     return (
                         <div className="card" key={index} >
-                            <div>
-                            {<item.image/>}
-                            </div>
-                            <h2>{item.name}</h2>
-                            <p>{item.text}</p>
+                           <div className="card_width">
+                                <div className="icon">
+                                {<item.image fontSize="large"/>}
+                                </div>
+                                <h2>{item.name}</h2>
+                                <p>{item.text}</p>
+                           </div>
                         </div>
                     )
                 })}

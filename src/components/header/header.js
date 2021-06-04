@@ -3,7 +3,6 @@ import "./header.css";
 import { NavLink } from "react-router-dom";
 import logo from "./logo.png";
 import Hamburger from "react-hamburgers";
-import "./header.sass";
 
 const Header = () => {
   const [isActive, setisActive] = useState(false);

@@ -8,13 +8,15 @@ const Ofd = () => {
      <div className="ofd__section">
        <div className="ofd__section-about">
         <h1 className="ofd__section-tittle">
-             Оператор Фискальных данных <br /> Новая Норма
+             ОФД-НН
             </h1>
-           <p className="ofd__section-subtittle">Бесперебойная передача <br /> фискальных данных в ГНС и <br /> резервирование в течение 5 лет</p>
+           <p className="ofd__section-subtittle">Официальный оператор фискальных данных "ОФД-НН" 
+            <br /> обрабатывает,  хранит и передает информацию в государственную 
+            <br/>налоговую службу, отправляет чеки покупателям. </p>
             <button className='ofd__section-btn'>Подключить</button>
               </div>
-   <div className="ofd__section-img">
-<img src={w} alt="Офд новая норма" />
+            <div className="ofd__section-img">
+          <img src={w} alt="Офд новая норма" />
        </div>
      </div>
      </div>

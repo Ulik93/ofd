@@ -5,6 +5,7 @@ import Header from "./components/header/header";
 import Footer from "./components/Footer/Footer";
 import Knowledgebase from "./components/knowledgebase/Knowledgebase";
 import Kassa from "./components/kassa/EquipmentMain";
+import Contacts from "./components/ContactUs/ContactUs";
 
 function App() {
   return (
@@ -14,11 +15,9 @@ function App() {
         <Route path="/" component={Home} exact />
         <Route path="/knowledgebase" component={Knowledgebase} exact />
         <Route path="/Kassa" component={Kassa} exact />
+        <Route path="/contactUs" component={Contacts} exact />
         <Redirect to="/" />
       </Switch>
-      <div>
-        OFD
-      </div>
       <Footer />
     </BrowserRouter>
   );

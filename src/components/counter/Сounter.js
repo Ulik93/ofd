@@ -1,7 +1,7 @@
 import React from "react";
 import CountDay from "./CountDay";
 import ofdphoto from "./img/ofd.png";
-import "./counter.css";
+import "./counter.sass";
 import img from "./img/count_img.svg";
 import CountYear from "./CountYear";
 const Counter = () => {

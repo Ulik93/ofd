@@ -16,6 +16,9 @@ function App() {
         <Route path="/Kassa" component={Kassa} exact />
         <Redirect to="/" />
       </Switch>
+      <div>
+        OFD
+      </div>
       <Footer />
     </BrowserRouter>
   );

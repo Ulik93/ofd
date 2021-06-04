@@ -9,10 +9,14 @@ const useForm = (title, validate, closeModal) => {
   const [values, setValue] = useState({
       first_name: "",
       phone: "",
+      email: "",
       company: "",
       address: "",
       product: title,
-      profile_images: [],
+      registration_certificate_image: null,
+      profile_images: null,
+      subject_photo: null,
+      technical_passport: null,
     }),
     [errors, setErrors] = useState({}),
     [isSubmitting, setIsSubmitting] = useState(false)
@@ -24,27 +28,17 @@ const useForm = (title, validate, closeModal) => {
         [name]: value,
       })
     },
+    handleImageChange = (e) => {
+      const { name, files } = e.target
+      setValue({
+        ...values,
+        [name]: files[0],
+      })
+    },
     handleFormSubmit = (e) => {
       e.preventDefault()
       setErrors(validate(values))
       setIsSubmitting(true)
-    },
-    uploadImage = (e) => {
-      // const files = e.target.files[0]
-      // let reader = new FileReader()
-      // reader.readAsDataURL(files)
-      // data.append("file", files[0])
-      // console.log(typeof reader.result)
-      const formData = new FormData()
-
-      formData.append("myFile", e.target.files[0], e.target.files[0].name)
-      console.log(e.target.files, typeof e.target.files)
-      setValue({
-        ...values,
-        profile_images: e.target.files[0],
-        subject_photo: e.target.files[0],
-        technical_passport: e.target.files[0],
-      })
     },
     notify = () => {
       toast.success("Ваша форма успешно отправлена", {
@@ -54,14 +48,22 @@ const useForm = (title, validate, closeModal) => {
 
   useEffect(() => {
     if (isSubmitting && Object.keys(errors).length === 0) {
-      sendEquipmentForm(values)
+      const form = new FormData()
+      for (let key in values) {
+        form.append(key, values[key])
+      }
+
+      sendEquipmentForm(form)
       setValue({
         first_name: "",
         phone: "",
         company: "",
         address: "",
         product: title,
-        profile_images: [],
+        registration_certificate_image: null,
+        profile_images: null,
+        subject_photo: null,
+        technical_passport: null,
       })
       closeModal()
       notify()
@@ -75,7 +77,7 @@ const useForm = (title, validate, closeModal) => {
     })
   }, [title])
 
-  return { handleChange, values, handleFormSubmit, errors, uploadImage }
+  return { handleChange, handleImageChange, values, handleFormSubmit, errors }
 }
 
 export default useForm

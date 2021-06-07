@@ -1,0 +1,50 @@
+.ofd {
+  padding: 2% 0 2% 0;
+  background: #090f2f;
+  background: -webkit-gradient(linear, left top, right top, from(#090f2f), color-stop(50%, #010f68), to(#080e2e));
+  background: linear-gradient(90deg, #090f2f 0%, #010f68 50%, #080e2e 100%);
+}
+
+.ofd__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ofd__section-img img {
+  width: 100%;
+}
+
+.ofd__section-tittle {
+  font-family: colibriRegular;
+  padding: 10px 0 10px;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.ofd__section-subtittle {
+  font-family: colibriRegular;
+  color: #fff;
+  font-size: 1.1em;
+  margin: 1% 0 4% 0;
+}
+
+.ofd__section-btn {
+  background: #730e86;
+  background: -webkit-gradient(linear, left top, right top, from(#730e86), to(#261096));
+  background: linear-gradient(90deg, #730e86 0%, #261096 100%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.1em;
+  font-family: colibriRegular;
+  padding: 5px 25px 5px 25px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=ofd.css.map */

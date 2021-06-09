@@ -18,11 +18,15 @@
     font-size: 18px;
     text-align: left;
 }
+.marking_child-tittle{
+    margin-bottom: 5%;
+}
 
 h1{
     font-size: 40px;
 }
 .knopka{
+    margin-top: 5%;
     text-align: left;
 }
 
@@ -32,6 +36,9 @@ h1{
     background-color: rgb(14, 14, 100);
     color: white;
     padding: 1rem;
+}
+.main_text-img{
+    margin-top: 5%;
 }
 
 .image_1{

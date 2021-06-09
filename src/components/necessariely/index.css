@@ -1,0 +1,45 @@
+.necessary_flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.marking_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+.marking_child{
+    max-width: 330px;
+    font-size: 18px;
+    text-align: left;
+}
+
+h1{
+    font-size: 40px;
+}
+.knopka{
+    text-align: left;
+}
+
+.main_text{
+    max-width: 540px;
+    text-align: left;
+    background-color: rgb(14, 14, 100);
+    color: white;
+    padding: 1rem;
+}
+
+.image_1{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 150px;
+    height: 45px;
+}

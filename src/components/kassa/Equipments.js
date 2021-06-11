@@ -13,7 +13,7 @@ const customStyles = {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
   },
   content: {
-    top: "53%",
+    top: "40%",
     left: "50%",
     right: "auto",
     bottom: "auto",
@@ -27,18 +27,12 @@ Modal.setAppElement("#root")
 export default function Equipments(props) {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [productName, setProductName] = useState(null)
-  const {
-    handleChange,
-    handleImageChange,
-    values,
-    handleFormSubmit,
-    errors,
-  } = useForm(productName, validateInfo, closeModal)
-  const {
-    phone,
-    email,
-    address
-  } = errors
+  const { handleChange, values, handleFormSubmit, errors } = useForm(
+    productName,
+    validateInfo,
+    closeModal
+  )
+  const { phone, email, first_name } = errors
 
   var subtitle
   function openModal(name) {
@@ -71,7 +65,7 @@ export default function Equipments(props) {
               className="staffs_cards_item"
             >
               <div className="staffs_cards_item_img">
-                <img  src={item.image} alt="image" />
+                <img src={item.image} alt="image" />
               </div>
               <div className="staffs_cards_item_description">
                 <div className="staffs_cards_item_title">{item.title}</div>
@@ -121,17 +115,23 @@ export default function Equipments(props) {
             <form onSubmit={handleFormSubmit}>
               <label>Имя:</label>
               <input
-                className="modal__equipment-input"
+                className={`modal__equipment-input ${
+                  first_name && "error-border"
+                }`}
                 type="text"
                 name="first_name"
                 placeholder="Имя"
                 onChange={handleChange}
                 value={values.first_name}
               />
-            
+              {first_name ? (
+                <p className="modal__eqipment-error">{first_name}</p>
+              ) : (
+                <br />
+              )}
               <label>Номер телефона:</label>
               <input
-                className="modal__equipment-input"
+                className={`modal__equipment-input ${phone && "error-border"}`}
                 type="text"
                 name="phone"
                 placeholder="Номер телефона"
@@ -145,7 +145,7 @@ export default function Equipments(props) {
               )}
               <label>Email:</label>
               <input
-                className="modal__equipment-input"
+                className={`modal__equipment-input ${email && "error-border"}`}
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -157,12 +157,12 @@ export default function Equipments(props) {
               ) : (
                 <br />
               )}
-          
+
               <div>
                 Оборудование:
                 <span className="modal__equipment-name">{productName}</span>
               </div>
-              <button className="about_btn modal__equipment-btn" type="submit">
+              <button className="modal__equipment-btn" type="submit">
                 Отправить
               </button>
             </form>

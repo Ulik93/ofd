@@ -10,13 +10,7 @@ const useForm = (title, validate, closeModal) => {
       first_name: "",
       phone: "",
       email: "",
-      company: "",
-      address: "",
       product: title,
-      registration_certificate_image: null,
-      profile_images: null,
-      subject_photo: null,
-      technical_passport: null,
     }),
     [errors, setErrors] = useState({}),
     [isSubmitting, setIsSubmitting] = useState(false)
@@ -26,13 +20,6 @@ const useForm = (title, validate, closeModal) => {
       setValue({
         ...values,
         [name]: value,
-      })
-    },
-    handleImageChange = (e) => {
-      const { name, files } = e.target
-      setValue({
-        ...values,
-        [name]: files[0],
       })
     },
     handleFormSubmit = (e) => {
@@ -48,22 +35,11 @@ const useForm = (title, validate, closeModal) => {
 
   useEffect(() => {
     if (isSubmitting && Object.keys(errors).length === 0) {
-      const form = new FormData()
-      for (let key in values) {
-        form.append(key, values[key])
-      }
-
-      sendEquipmentForm(form)
+      sendEquipmentForm(values)
       setValue({
         first_name: "",
         phone: "",
-        company: "",
-        address: "",
         product: title,
-        registration_certificate_image: null,
-        profile_images: null,
-        subject_photo: null,
-        technical_passport: null,
       })
       closeModal()
       notify()
@@ -77,7 +53,7 @@ const useForm = (title, validate, closeModal) => {
     })
   }, [title])
 
-  return { handleChange, handleImageChange, values, handleFormSubmit, errors }
+  return { handleChange, values, handleFormSubmit, errors }
 }
 
 export default useForm

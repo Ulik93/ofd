@@ -71,14 +71,19 @@ border: 3px solid #002046;
   align-items: center;
 }
 .knowledgebase__container-content{
+  display: flex;
+
+  background-color: white;
+  width: 96%;
   height: 200px;
   display: flex;
   align-items: center;
   padding: 0 2% 0 2% ;
 }
 .knowledgebase__container-content p{
+  text-align: center;
   line-height: 90%;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: hsl(240deg 1% 42%);
   font-weight: bold;
 }

@@ -74,7 +74,7 @@ const Knowledgebase = () => {
             </div>
             <div className="knowledgebase__container-content">
               <p>
-              Проверка чека
+              Проверка чека <br /> <br />    
               </p>
             </div>
           </div>

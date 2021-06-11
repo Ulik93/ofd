@@ -1,7 +1,6 @@
 import React from "react";
 import "./uslugi.sass";
 import kassyphoto from "./img/kassyblock.png";
-import Counter from "../counter/Сounter";
 const Uslugi = () => {
   return (
     <>

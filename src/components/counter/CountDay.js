@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import ReactDOM from "react-dom";
 
 function CountDay() {
   const [count, setCount] = useState(1221);

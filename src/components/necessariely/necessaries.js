@@ -13,7 +13,7 @@ export default function Necessaries() {
                         <p>Обязательная цифровая маркировка товаров для опта и розницы начинается с 2021 года.</p>
                     </div>
                     <div>
-                        <img className="main_text-img logo" src={image}/>
+                        <img className="main_text-img logo" src={image} alt="logo"/>
                     </div>
                 </div>
                 <div className="marking_flex">

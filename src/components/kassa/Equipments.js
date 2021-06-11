@@ -37,13 +37,7 @@ export default function Equipments(props) {
   const {
     phone,
     email,
-    address,
-    first_name,
-    company,
-    registration_certificate_image,
-    subject_photo,
-    technical_passport,
-    profile_images,
+    address
   } = errors
 
   var subtitle
@@ -77,7 +71,7 @@ export default function Equipments(props) {
               className="staffs_cards_item"
             >
               <div className="staffs_cards_item_img">
-                <img src={item.image} alt="image" />
+                <img  src={item.image} alt="image" />
               </div>
               <div className="staffs_cards_item_description">
                 <div className="staffs_cards_item_title">{item.title}</div>
@@ -134,11 +128,7 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.first_name}
               />
-              {first_name ? (
-                <p className="modal__eqipment-error">{first_name}</p>
-              ) : (
-                <br />
-              )}
+            
               <label>Номер телефона:</label>
               <input
                 className="modal__equipment-input"
@@ -167,85 +157,7 @@ export default function Equipments(props) {
               ) : (
                 <br />
               )}
-              <label>Название компании:</label>
-              <input
-                className="modal__equipment-input"
-                type="text"
-                name="company"
-                placeholder="Название компании"
-                onChange={handleChange}
-                value={values.company}
-              />
-              {company ? (
-                <p className="modal__eqipment-error">{company}</p>
-              ) : (
-                <br />
-              )}
-              <label>Адрес:</label>
-              <input
-                className="modal__equipment-input"
-                type="text"
-                name="address"
-                placeholder="Адрес"
-                onChange={handleChange}
-                value={values.address}
-              />
-              {address ? (
-                <p className="modal__eqipment-error">{address}</p>
-              ) : (
-                <br />
-              )}
-
-              <label>registration_certificate_image:</label>
-              <input
-                type="file"
-                accept="image/*"
-                name="registration_certificate_image"
-                onChange={handleImageChange}
-              />
-              {registration_certificate_image ? (
-                <p className="modal__eqipment-error">
-                  {registration_certificate_image}
-                </p>
-              ) : (
-                <br />
-              )}
-              <label>subject_photo:</label>
-              <input
-                type="file"
-                accept="image/*"
-                name="subject_photo"
-                onChange={handleImageChange}
-              />
-              {subject_photo ? (
-                <p className="modal__eqipment-error">{subject_photo}</p>
-              ) : (
-                <br />
-              )}
-              <label>technical_passport:</label>
-              <input
-                type="file"
-                accept="image/*"
-                name="technical_passport"
-                onChange={handleImageChange}
-              />
-              {technical_passport ? (
-                <p className="modal__eqipment-error">{technical_passport}</p>
-              ) : (
-                <br />
-              )}
-              <label>profile_images:</label>
-              <input
-                type="file"
-                accept="image/*"
-                name="profile_images"
-                onChange={handleImageChange}
-              />
-              {profile_images ? (
-                <p className="modal__eqipment-error">{profile_images}</p>
-              ) : (
-                <br />
-              )}
+          
               <div>
                 Оборудование:
                 <span className="modal__equipment-name">{productName}</span>

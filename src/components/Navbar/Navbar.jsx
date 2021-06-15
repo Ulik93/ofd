@@ -21,7 +21,7 @@ const Navbar = () => {
           <NavLink to="/contactUs">Контакты</NavLink>
         </div>
         <div className="header__auth">
-          <a className="header__auth-link" href="#">
+          <a className="header__auth-link" target="_blank" href="http://lk.norma.kg/login">
             Войти
           </a>
         </div>

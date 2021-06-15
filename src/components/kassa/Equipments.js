@@ -83,6 +83,7 @@ export default function Equipments(props) {
                   Заказать
                 </Button>
               </div>
+              
             </div>
           ))}
         </div>

@@ -1,12 +1,15 @@
 import React from "react";
 import "./uslugi.sass";
-import kassyphoto from "./img/kassyblock.png";
 const Uslugi = () => {
   return (
     <>
-      <div className="kassy__red"></div>
-      <div className="kassy">
-      Блок
+      <div className="uslugi__red"></div>
+      <div className="uslugi">
+        <div className="uslugi__wrapper">
+          <div className="uslugi__content-box">
+
+          </div>
+        </div>
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import CountDay from "./CountDay";
 import ofdphoto from "./img/ofd.png";
 import "./counter.sass";
-import img from "./img/count_img.svg";
+import img from "./img/imm.png";
 import CountYear from "./CountYear";
 const Counter = () => {
   return (
@@ -16,7 +16,7 @@ const Counter = () => {
               <CountDay />
             </h1>
           </div>
-          <img src={img} alt="" />
+          <img className="counter-content-img" src={img} alt="" />
 
           <div className="ofd__block">
             <h1 className="counter-1">

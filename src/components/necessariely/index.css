@@ -1,4 +1,6 @@
 .necessary_flex{
+    height: 100vh;
+    
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -24,6 +26,9 @@
 
 h1{
     font-size: 40px;
+}
+iframe{
+    background-color: white;
 }
 .knopka{
     margin-top: 5%;

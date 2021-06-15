@@ -1,38 +1,46 @@
-import React from 'react'
-import './index.css'
-import image from '../header/logo.png'
-import image2 from './marking.svg'
-
+import React from "react";
+import "./index.css";
+import image from "../header/logo.png";
+import vid from "./files/video-chestznak.mp4";
 export default function Necessaries() {
-    return (
-        <div className="wrapper">
-            <div className="necessary_flex">
-                <div className="marking_flex">
-                    <div className="main_text">
-                        <h1>Обязательная маркировка товаров</h1>
-                        <p>Обязательная цифровая маркировка товаров для опта и розницы начинается с 2021 года.</p>
-                    </div>
-                    <div>
-                        <img className="main_text-img logo" src={image} alt="logo"/>
-                    </div>
-                </div>
-                <div className="marking_flex">
-                    <div className="marking_child">
-                        <h3 className="marking_child-tittle">Первый ОФД уже участвует в проекте по маркировке</h3>
-                        <p>
-                            ОФД "Новая Норма" принимает участие в государственных экспериментах по цифровой маркировке товаров, интегрирован и активно взаимодействует по проекту маркировки с Центром развития перспективных технологий (ЦРПТ).
-                            Приглашаем представителей от оптовой и розничной торговли стать участниками пилотных проектов.
-                        </p>
-                        <div>
-                            <button className="ofd__section-btn knopka">Подробнее про маркировку</button>
-                        </div>
-                    </div>
-                <div className="image_1">
-                        <img src={image2}/>
-                </div>
-                </div>         
-            </div>
-
+  return (
+    <div className="wrapper">
+      <div className="necessary_flex">
+        <div className="marking_flex">
+          <div className="main_text">
+            <h1>Обязательная маркировка товаров</h1>
+            <p>
+              Обязательная цифровая маркировка товаров для оптовой и розничной
+              продажи начинается с 2021 года.
+            </p>
+          </div>
+          <div>
+           
+          </div>
         </div>
-    )
+        <div className="marking_flex">
+          <div className="marking_child">
+            <h3 className="marking_child-tittle">
+              ОФД-НН уже участвует в проекте по маркировке
+            </h3>
+            <p>
+              ОФД-НН принимает участие в экспериментах по цифровой маркировке
+              товаров, интегрирован и активно взаимодействует по проекту
+              маркировки с системой "Честный Знак", "Текшер". Приглашаем
+              представителей оптовой и розничной торговли стать участниками
+              пилотных проектов.
+            </p>
+            <div>
+              <button className="ofd__section-btn knopka">
+                Подробнее про маркировку
+              </button>
+            </div>
+            
+          </div>
+        </div>
+        <div> <div>
+        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/9smaOmkuNOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>{" "}</div>
+      </div>
+    </div>
+  );
 }

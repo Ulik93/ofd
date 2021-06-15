@@ -12,6 +12,9 @@
 .counter-content img {
   width: 35%;
 }
+.counter-content-img{
+  border-radius: 12px;
+}
 
 .counter__wrapper {
   display: -webkit-box;

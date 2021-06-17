@@ -29,11 +29,7 @@
   margin: 0 auto;
 }
 
-.text {
-  margin: 0 35px 15px 15px;
-  font-size: 19px;
-  padding: 35px;
-}
+
 .map {
   display: flex;
   justify-content: center;

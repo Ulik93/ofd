@@ -19,7 +19,7 @@ export default function Capabilities() {
         {name: "География", image: MapIcon, text: "Услуги ОФД оказываются на всей территории Кыргызской Республики"},
     ]
     return (
-       <div className="wrapper">
+       <div className="wrapper benefits">
             <h1>
                 Возможности и преимущества
             </h1>

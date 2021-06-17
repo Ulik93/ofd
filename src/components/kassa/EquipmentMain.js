@@ -8,7 +8,6 @@ import port600 from "./images/port600.jpg"
 
 import "./Equipments.css"
 
-
 export default function EquipmentMain() {
   const staffs4 = [
     {
@@ -35,9 +34,7 @@ export default function EquipmentMain() {
   ]
   return (
     <BrowserRouter>
-      <div className="equipments-">
-        <ControlTech data={staffs4} />
-      </div>
+      <ControlTech data={staffs4} />
     </BrowserRouter>
   )
 }

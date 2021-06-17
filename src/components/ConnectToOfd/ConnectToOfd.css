@@ -1,0 +1,49 @@
+.ofd-connect {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.ofd-connect__select-days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.ofd-connect__select-days:hover {
+  background-color: red;
+}
+.ofd-connect__select-days:hover .ofd-connect__date,
+.ofd-connect__select-days:hover .ofd-connect__price-in-day,
+.ofd-connect__select-days:hover .ofd-connect__price {
+  color: white;
+}
+
+.ofd-connect__date {
+  transition: color 0.3s;
+  margin-bottom: 11px;
+}
+
+.ofd-connect__price-in-day {
+  transition: color 0.3s;
+  margin-top: 11px;
+}
+
+.ofd-connect__price {
+  transition: color 0.3s;
+  font-size: 40px;
+  color: red;
+  font-weight: 700;
+}
+
+.ofd-connect__date {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

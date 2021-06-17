@@ -10,7 +10,7 @@
 
 .staffs_cards_item {
   margin-bottom: 1.5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* SIDEBAR */
@@ -18,9 +18,9 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 330px auto;
-      grid-template-columns: 330px auto;
+  grid-template-columns: 330px auto;
   -webkit-column-gap: 40px;
-          column-gap: 40px;
+  column-gap: 40px;
 }
 
 .equipment__sidebar {
@@ -28,9 +28,9 @@
   display: grid;
   margin: 2rem 0;
   -ms-grid-columns: 330px;
-      grid-template-columns: 330px;
-  -ms-grid-rows: (55px)[auto-fit];
-      grid-template-rows: repeat(auto-fit, 55px);
+  grid-template-columns: 330px;
+  -ms-grid-rows: (55px) [auto-fit];
+  grid-template-rows: repeat(auto-fit, 55px);
 }
 
 .nav_link-items {
@@ -53,10 +53,10 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 
@@ -64,7 +64,7 @@
   max-width: 371px;
   background: #ffffff;
   -webkit-box-shadow: 0 1px 23px 4px rgba(214, 218, 255, 0.66);
-          box-shadow: 0 1px 23px 4px rgba(214, 218, 255, 0.66);
+  box-shadow: 0 1px 23px 4px rgba(214, 218, 255, 0.66);
   border-radius: 14px;
 }
 
@@ -88,7 +88,7 @@
 
 .equipments_item_image img:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .equipments_item_info {
@@ -125,12 +125,12 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 7%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .nav_link {
@@ -192,11 +192,11 @@
   .equipments_row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .staffs_cards_item {
     max-width: 370px;
@@ -208,7 +208,7 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-columns: 100%;
     row-gap: 40px;
   }
   .equipments_wrapper {
@@ -217,7 +217,7 @@
   .equipment__sidebar {
     margin: 2rem 0;
     -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-columns: 100%;
   }
   .modal_x {
     display: block;

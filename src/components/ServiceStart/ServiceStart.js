@@ -11,20 +11,19 @@ export default function ServiceStart() {
         {image: RateReviewIcon, text: "Зарегистрируйте кассу с помощью ОФД-НН или в личном кабинете"}
     ]
     return (
-        <div className="red_top">
+        <div className="startWork">
             <div className="wrapper">
-            <h1 className="h1text">Как начать работу с сервисом</h1>
+            <h1 className="startWork_title">Как начать работу с сервисом</h1>
 
             <div className="flex_box">
                 {items.map((item, index) => {
                     return (
                         <div className="item" key={index}>
-                            <div className="index"><h3>{index + 1}</h3></div>
                             <div className="second_index">
                                 <div className="icon">
                                     <item.image fontSize="large"/>
                                 </div>
-                                <p className="text">{item.text}</p>
+                                <p className="startWork_text">{item.text}</p>
                             </div>
                         </div>
                     )

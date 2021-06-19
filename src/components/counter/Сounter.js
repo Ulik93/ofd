@@ -12,16 +12,18 @@ const Counter = () => {
       <div className="counter-content">
           <div className="ofd__block">
             <h1 className="counter-1">
+            <h3 className="h3">              <CountDay /></h3>
+
               <span>Чеков за сегодня</span>
-              <CountDay />
             </h1>
           </div>
           <img className="counter-content-img" src={img} alt="" />
 
           <div className="ofd__block">
             <h1 className="counter-1">
-              <span>Чеков за все время</span>
                <CountYear />
+               <span>Чеков за все время</span>
+
             </h1>
           </div>
           </div>

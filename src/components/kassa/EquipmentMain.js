@@ -1,9 +1,10 @@
 import React from "react"
 import { BrowserRouter } from "react-router-dom"
 import ControlTech from "./Parts/ControlTech"
-import img7 from "./images/7.png"
-import img15 from "./images/16.jpg"
-import port600 from "./images/port600.jpg"
+import img7 from "./images/2.png"
+import img15 from "./images/3.png"
+import port600 from "./images/1.png"
+import port25f from "./images/4.png"
 // import Rashod from "./Parts/Rashod";
 
 import "./Equipments.css"
@@ -30,6 +31,13 @@ export default function EquipmentMain() {
           Можно подключить любое периферийное устройство.
           Удобна смена кассовой ленты.`,
       image: img15,
+    },
+    {
+      title: "ПОРТ - 25Ф",
+      desc: `3 цвета: классический, черный, голубой.
+          Можно подключить любое периферийное устройство.
+          Удобна смена кассовой ленты.`,
+      image: port25f,
     },
   ]
   return (

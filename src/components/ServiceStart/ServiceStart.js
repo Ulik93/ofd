@@ -7,7 +7,7 @@ import './index.css'
 export default function ServiceStart() {
     const items = [
         {image: ImportantDevicesIcon, text: "Зарегистрируйтесь\\войдите в личный кабинет ОФД-НН"},
-        {image: ContactMailIcon, text: "Подключите услугу ОФД «Новая Норма»"},
+        {image: ContactMailIcon, text: "Подключите услугу ОФД-НН"},
         {image: RateReviewIcon, text: "Зарегистрируйте кассу с помощью ОФД-НН или в личном кабинете"}
     ]
     return (

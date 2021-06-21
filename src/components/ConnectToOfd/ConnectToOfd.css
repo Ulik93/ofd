@@ -1,6 +1,7 @@
 .ofd-connect {
   margin: 50px auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   font-family: sans-serif;

@@ -16,7 +16,7 @@
 .header__wrapper {
   max-width: 1080px;
   margin: 0 auto;
-  overflow: hidden;
+
 }
 
 .header__logo {
@@ -69,10 +69,20 @@
   border-bottom: 1px solid #010b48;
 }
 
+.header__icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background: black;
+  margin-right: 3%;
+}
+
 @media (max-width: 800px) {
   .header__hamburger {
-    display: none;
-    position: absolute;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     right: 0;
     top: 0;
     background-color: white;
@@ -81,9 +91,17 @@
   .header__nav {
     -webkit-box-shadow: -8px 12px 20px 5px rgba(0, 0, 0, 0.34);
     box-shadow: -8px 12px 20px 5px rgba(0, 0, 0, 0.34);
-    display: flex;
     flex-direction: column;
     padding: 10%;
+    display: none;
+    position: absolute;
+    right: 45px;
+    top: 60%;
+    z-index: 999;
+    background: white;
+  }
+  .header__nav.active {
+    display: flex;
   }
   .header__auth-link {
     margin: 0;
@@ -91,5 +109,8 @@
   .header__nav-items a {
     margin: 0;
     margin-right: 0;
+  }
+  .header__icon {
+    display: block;
   }
 }

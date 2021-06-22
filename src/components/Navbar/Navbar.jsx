@@ -10,23 +10,24 @@ const Navbar = () => {
   function changeBurger() {
     setActive(prev => prev = !prev)
   }
+
   return (
     <div className="header__hamburger">
-      <div className={active ? 'header__nav active' : 'header__nav'}>
+      <div className={active ? 'header__nav active' : 'header__nav close'}>
         <div className="header__nav-items">
-          <NavLink to="/sd">Главная</NavLink>
+          <NavLink onClick={changeBurger} to="/sd">Главная</NavLink>
         </div>
         <div className="header__nav-items">
-          <NavLink to="/sd">Услуги</NavLink>
+          <NavLink onClick={changeBurger} to="/sd">Услуги</NavLink>
         </div>
         <div className="header__nav-items">
-          <NavLink to="/kassa">Кассы</NavLink>
+          <NavLink onClick={changeBurger} to="/kassa">Кассы</NavLink>
         </div>
         <div className="header__nav-items">
-          <NavLink to="/knowledgebase">База знаний</NavLink>
+          <NavLink onClick={changeBurger} to="/knowledgebase">База знаний</NavLink>
         </div>
         <div className="header__nav-items">
-          <NavLink to="/contactUs">Контакты</NavLink>
+          <NavLink onClick={changeBurger} to="/contactUs">Контакты</NavLink>
         </div>
         <div className="header__auth">
           <a className="header__auth-link" target="_blank" href="http://lk.norma.kg/login">
@@ -34,8 +35,8 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className="header__icon" onClick={changeBurger}>
-        <i class="fas fa-bars"></i>
+      <div className={active ? 'header__icon active' : 'header__icon'} onClick={changeBurger}>
+        <span></span>
       </div>
 
     </div>

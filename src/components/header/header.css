@@ -71,10 +71,62 @@
 
 .header__icon {
   display: none;
-  width: 30px;
+  margin-right: 7%; 
+  width: 25px;
   height: 30px;
+  align-items: center;
+  justify-content: center;
+  transition: .9s;
+}
+
+.header__icon span {
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 2px;
+  border-radius: 5px;
+  background: black;
+} 
+
+
+
+.header__icon span::before,
+.header__icon span::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  border-radius: 5px;
   background: black;
   margin-right: 3%;
+  display: block;
+  width: 25px;
+  transition: .5s;
+}
+
+.header__icon span::before {
+  top: -8px;
+  position: absolute;
+}
+
+.header__icon span::after {
+  bottom: -8px;
+  position: absolute;
+}
+
+.header__icon.active span::before {
+  top: 0;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.header__icon.active span::after {
+  bottom: 0;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.header__icon.active span {
+  background: white;
 }
 
 @media (max-width: 800px) {
@@ -92,25 +144,46 @@
     -webkit-box-shadow: -8px 12px 20px 5px rgba(0, 0, 0, 0.34);
     box-shadow: -8px 12px 20px 5px rgba(0, 0, 0, 0.34);
     flex-direction: column;
-    padding: 10%;
-    display: none;
+    padding: 0;
+    width: 100vw;
+    height: 0;
+    display: flex;
     position: absolute;
-    right: 45px;
-    top: 60%;
+    right: 0;
+    top: 57px;
     z-index: 999;
-    background: white;
+    background: #111820;
+    color: white;
+    overflow: hidden;
+    transition: .7s;
   }
+
   .header__nav.active {
     display: flex;
+    height: 100vh;
+    padding: 10% 0;
+  }
+  .header__nav.close .header__nav-items a {
+    color: transparent;
+    transition: 0;
   }
   .header__auth-link {
-    margin: 0;
+    margin: 15px 0 0;
+    background: transparent;
+    border: 1px solid white;
   }
   .header__nav-items a {
     margin: 0;
     margin-right: 0;
+    color: transparent;
+    transition: .5s;
+    transition-delay: .4s;
+  }
+
+  .header__nav.active .header__nav-items a {
+    color: white;
   }
   .header__icon {
-    display: block;
+    display: flex;
   }
 }

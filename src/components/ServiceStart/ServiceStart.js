@@ -15,7 +15,7 @@ export default function ServiceStart() {
             <div className="wrapper">
             <h1 className="startWork_title">Как начать работу с сервисом</h1>
 
-            <div className="flex_box">
+            <div className="grid_box">
                 {items.map((item, index) => {
                     return (
                         <div className="item" key={index}>

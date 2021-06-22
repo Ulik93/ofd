@@ -1,37 +1,57 @@
 .counter-content
   img
-    width: 35%
+    width: 90%
+    display: block
+    margin: auto 0
+    grid-area: image
 
   color: white
-  display: flex
+  display: grid
+  grid-template-areas: "counter__1 image image image counter__2"
 
-.counter__wrapper
-  display: flex
+  height: 450px
+  max-width: 1200px
+  margin: 0 auto
 
 .kassy__content-bottom
-  padding-left: 5%
-  padding-top: 33%
+  padding: 33% 0 0
+  height: 450px
 .counter-content-img
   border-radius: 50px
-.ofd__block
+.counter__1,
+.counter__2
   padding: 10px
   display: flex
   align-items: center
 
-.ofd__block .counter-1
+
+.counter__1
+  grid-area: counter__1
+
+.counter__2
+  grid-area: counter__2
+
+
+
+.counter__text .counter__text
   text-align: center
-  font-size: 23px 
+  font-size: 23px
 
-@media screen and (max-width: 905px)
-  .counter-content img
-    width: 40%
+@media screen and (max-width: 850px)
+  .counter-content
+    grid-template-areas: "image image""counter__1 counter__2" 
 
-  .ofd__block
+  .counter-content
+    img
+      width: 40%
+      margin: 0 auto
+   
+  .counter__text
     font-size: 10px
     margin-top: 2%
 
 @media screen and (max-width: 805px)
-  .ofd__block
+  .counter__text 
     font-size: 9px
     margin-top: 5%
 
@@ -39,16 +59,18 @@
     padding-top: 41%
 
 @media screen and (max-width: 705px)
-  .ofd__block
+  .counter__text
     font-size: 9px
     margin-top: 10%
 
   .kassy__content-bottom
     padding-top: 51%
 
-@media screen and (max-width: 705px)
-  .ofd__block
-    font-size: 9px
+ 
+
+@media screen and (max-width: 400px)
+  .counter__text h1
+    font-size: 18px
     margin-top: 10%
 
   .kassy__content-bottom

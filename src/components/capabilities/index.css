@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.flex_container{
+.grid_container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -52,13 +52,13 @@
 }
 
 @media (max-width:790px) {
-    .flex_container{
+    .grid_container{
         grid-template-columns: 1fr 1fr ;
     }
 }
 
 @media (max-width: 600px) {
-    .flex_container{
+    .grid_container{
         grid-template-columns: 1fr ;
     }
  }

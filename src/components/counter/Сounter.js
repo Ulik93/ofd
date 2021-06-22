@@ -8,26 +8,24 @@ const Counter = () => {
   return (
     <div className="counter">
       <div className="kassy__content-bottom">
-        <div className="counter__wrapper">
-      <div className="counter-content">
-          <div className="ofd__block">
-            <h1 className="counter-1">
-            <h3 className="h3">              <CountDay /></h3>
+        <div className="counter-content">
+            <div className="counter__1">
+              <h1 className="counter__text">
+                <h3 className="h3">              <CountDay /></h3>
 
-              <span>Чеков за сегодня</span>
-            </h1>
-          </div>
-          <img className="counter-content-img" src={img} alt="" />
+                <span>Чеков за сегодня</span>
+              </h1>
+            </div>
+            <img className="counter-content-img" src={img} alt="" />
 
-          <div className="ofd__block">
-            <h1 className="counter-1">
-               <CountYear />
-               <span>Чеков за все время</span>
+            <div className="counter__2">
+              <h1 className="counter__text">
+                <CountYear />
+                <span>Чеков за все время</span>
 
-            </h1>
+              </h1>
+            </div>
           </div>
-          </div>
-        </div>
       </div>
     </div>
   );

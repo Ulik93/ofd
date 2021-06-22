@@ -23,7 +23,7 @@ export default function Capabilities() {
             <h1>
                 Возможности и преимущества
             </h1>
-            <div className="flex_container">
+            <div className="grid_container">
                 {items.map((item, index) => {
                     return (
                         <div className="card" key={index} >

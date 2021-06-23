@@ -9,7 +9,7 @@ const Ofd = () => {
           <div className="ofd__section-about">
             <h1 className="ofd__section-tittle">ОФД-НН</h1>
             <p className="ofd__section-subtittle">
-              Оператор фискальных данных "ОФД-НН"
+              Оператор фискальных данных ОФД-НН
               <br /> обрабатывает, хранит и передает информацию в
               государственную
               <br />

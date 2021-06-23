@@ -7,11 +7,6 @@
   margin-bottom: 30px;
 }
 
-.staffs_cards_item {
-  margin-bottom: 1.5rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 /* SIDEBAR */
 .equipments-nav_link {
   display: -ms-grid;
@@ -106,22 +101,13 @@
   line-height: 20px;
 }
 
-.staffs_cards_item_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 7%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
+
 
 .nav_link {
   margin-top: 10px;
 }
+
+
 
 /* MODAL */
 .modalContent {
@@ -188,6 +174,24 @@
   border: 1px solid red;
   margin-bottom: 5px;
 }
+
+/* CARD */
+
+.staffs_cards_item {
+  margin-bottom: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.staffs_cards_item_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.staffs_cards_item_img {
+
+}
+
 /* END OF MODAL */
 
 @media (max-width: 1380px) {

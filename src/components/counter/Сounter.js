@@ -9,21 +9,21 @@ const Counter = () => {
     <div className="counter">
       <div className="kassy__content-bottom">
         <div className="counter-content">
-            <div className="counter__1">
-              <h1 className="counter__text">
+            <div className="counter__1 counter">
+              <div className="counter__text">
                 <h3 className="h3">              <CountDay /></h3>
 
                 <span>Чеков за сегодня</span>
-              </h1>
+              </div>
             </div>
             <img className="counter-content-img" src={img} alt="" />
 
-            <div className="counter__2">
-              <h1 className="counter__text">
+            <div className="counter__2 counter">
+              <div className="counter__text">
                 <CountYear />
                 <span>Чеков за все время</span>
 
-              </h1>
+              </div>
             </div>
           </div>
       </div>

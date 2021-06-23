@@ -1,8 +1,8 @@
 .counter-content
   img
-    width: 90%
+    max-height: 400px
     display: block
-    margin: auto 0
+    margin: auto 
     grid-area: image
 
   color: white
@@ -14,8 +14,9 @@
   margin: 0 auto
 
 .kassy__content-bottom
-  padding: 33% 0 0
+  padding: 300px 0 0
   height: 450px
+  
 .counter-content-img
   border-radius: 50px
 .counter__1,
@@ -31,47 +32,69 @@
 .counter__2
   grid-area: counter__2
 
-
-
-.counter__text .counter__text
+.counter__text 
   text-align: center
   font-size: 23px
+
+.counter__text 
+  span
+    font-size: 30px
+    font-weight: 600
+    font-family: "Roboto",sans-serif
+
+
+
+  .counter__title
+
 
 @media screen and (max-width: 850px)
   .counter-content
     grid-template-areas: "image image""counter__1 counter__2" 
 
-  .counter-content
-    img
-      width: 40%
+  .counter-content img
+      width: 45%
       margin: 0 auto
+      margin-top: auto
    
   .counter__text
     font-size: 10px
-    margin-top: 2%
+    margin-bottom: 10px
+    margin: 0 auto
 
 @media screen and (max-width: 805px)
   .counter__text 
-    font-size: 9px
-    margin-top: 5%
+    span
+      font-size: 25px
+
+    h1
+      font-size: 35px
 
   .kassy__content-bottom
     padding-top: 41%
 
 @media screen and (max-width: 705px)
+  .counter-content-img
+    width: 55%
   .counter__text
-    font-size: 9px
     margin-top: 10%
 
   .kassy__content-bottom
     padding-top: 51%
 
+
  
 
 @media screen and (max-width: 400px)
   .counter__text h1
-    font-size: 18px
+    font-size: 25px
     margin-top: 10%
+
+  .counter__text 
+    span
+      font-size: 20px
+
+  
+
 
   .kassy__content-bottom
     padding-top: 71%

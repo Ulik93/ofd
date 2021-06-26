@@ -1,0 +1,62 @@
+.qesPrice {
+    padding: 40px 0;
+    text-align: center;
+    
+}
+
+.qesPrice__subtitle {
+    display: block;
+    height: 30px;
+    font-size: 18px;
+    width: fit-content;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+    margin: 0 auto;
+}
+
+.qesPrice__wrapper {
+    display: flex;
+}
+
+.qesPrice__block-F {
+    display: flex;
+}
+
+.qesPrice__category {
+    margin: 0 5px;
+}
+
+@media (max-width:990px) {
+    .qesPrice__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .category__block {
+        width: 35%;
+    }
+}
+
+@media (max-width:760px) {
+    .qesPrice__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .qesPrice__block-F {
+        flex-direction: column;
+    }
+    .qesPrice__block-F .priceCart,
+    .qesPrice__block-B .priceCart {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .qesPrice__block-F .priceCart .priceCart__text,
+    .qesPrice__block-B .priceCart .priceCart__text {
+        height: 100px;
+    }
+    .category__block {
+        width: 100%;
+    }
+    .qesPrice__category {
+        margin: 0;
+    }
+}

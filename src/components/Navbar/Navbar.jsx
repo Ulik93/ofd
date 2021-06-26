@@ -21,6 +21,9 @@ const Navbar = () => {
           <NavLink onClick={changeBurger} to="/sd">Услуги</NavLink>
         </div>
         <div className="header__nav-items">
+          <NavLink onClick={changeBurger} to="/qes">КЭП</NavLink>
+        </div>
+        <div className="header__nav-items">
           <NavLink onClick={changeBurger} to="/kassa">Кассы</NavLink>
         </div>
         <div className="header__nav-items">

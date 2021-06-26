@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Knowledgebase from "./components/knowledgebase/Knowledgebase";
 import Kassa from "./components/kassa/EquipmentMain";
 import Contacts from "./components/ContactUs/ContactUs";
+import Qes from "./pages/QES/Qes";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/knowledgebase" component={Knowledgebase} exact />
         <Route path="/Kassa" component={Kassa} exact />
         <Route path="/contactUs" component={Contacts} exact />
+        <Route exact path="/qes" render = {() => <Qes />} />
         <Redirect to="/" />
       </Switch>
       <Footer />

@@ -1,3 +1,19 @@
 h1, p{
     font-family: 'Roboto', sans-serif;
 }
+
+.btn__submit {
+    padding: 15px 20px;
+    background: transparent;
+    border: 1px solid #ff7033;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: .2s;
+}
+
+.btn__submit:hover {
+    background: #ff7033;
+    color: white;
+    border: 1px solid white;
+}
+

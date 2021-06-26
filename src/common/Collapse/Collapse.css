@@ -1,0 +1,40 @@
+.collapse__row {
+    display: flex;
+    align-items: center;
+    padding: 15px 16px;
+}
+
+.collapse__title {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.collapse__arrow {
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 5px;
+    display: block;
+    transition: .4s;
+}
+
+.collapse__content {
+    height: 0;
+    display: none;
+    transition: .7s;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.collapse.isOpen>.collapse__content {
+    display: block;
+    height: fit-content ;
+    padding: 0 16px;
+}
+
+.collapse.isOpen>.collapse__row>.collapse__arrow {
+    transform: rotate(90deg);
+
+}
